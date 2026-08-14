@@ -49,54 +49,7 @@ The system:
 
 # 3. System Architecture
 
-```text
-Live Webcam
-     |
-     v
-YOLO11n-Pose
-     |
-     v
-17 Human Body Keypoints
-     |
-     v
-Feature Extraction
-     |
-     +------------------------+
-     |                        |
-     v                        v
-Temporal Rule Engine     Random Forest
-     |                        |
-     +-----------+------------+
-                 |
-                 v
-          Decision Fusion
-                 |
-          +------+------+
-          |             |
-        Normal     Possible Fall
-                        |
-                 ML Persistence
-                        |
-                        v
-                 FALL DETECTED
-                        |
-              +---------+---------+
-              |                   |
-              v                   v
-       Incident Image        Local Alarm
-                                  |
-                                  v
-                         10-Second Window
-                            /           \
-                           /             \
-                    User Cancels      No Response
-                         |                 |
-                         v                 v
-                  Alert Cancelled    Caregiver Email
-                                    + Timestamp
-                                    + Detection Score
-                                    + Incident Image
-```
+![ElderCare AI System Architecture](docs/architecture.png)
 
 The video stream is processed automatically by the system. Continuous human monitoring is not required.
 
