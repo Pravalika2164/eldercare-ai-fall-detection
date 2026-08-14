@@ -1,0 +1,21 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+
+logs/
+incidents/
+
+data/raw/
+data/processed/
+
+*.zip
+
+.vscode/
+.idea/
+
+yolo11n-pose.pt
+
+# Experimental models
+models/fall_classifier.pkl
+models/fall_lstm.pt
